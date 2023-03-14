@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DAY 3 : Home Page</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <h1>Day 3 : Home Page</h1>
-</body>
+    <a href="./htmls/form.html">Form Page</a>
+    <!-- For advertisement we use iframe -->
+    <iframe
+      src="./htmls/iframe.html"
+      frameborder="0"
+      style="width: 700px"
+    ></iframe>
+    <!-- Google Map Iframe Here  -->
+    <iframe
+      width="600"
+      height="450"
+      style="border: 0"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Space+Needle,Seattle+WA"
+    >
+    </iframe>
+
+    <kbd>
+      Hello , Every one !
+      For copy : "Ctrl + C" <br/>
+      For Save :" Ctrl + S" <br/>
+    </kbd>
+    <br/>
+    <code>
+      Hello Saifur !
+    </code>
+    <pre>
+        #include <iostream>
+        #include <cmath>
+        using namespace std;
+        
+        int main() {
+        
+            float a, b, c, x1, x2, discriminant, realPart, imaginaryPart;
+            cout << "Enter coefficients a, b and c: ";
+            cin >> a >> b >> c;
+            discriminant = b*b - 4*a*c;
+            
+            if (discriminant > 0) {
+                x1 = (-b + sqrt(discriminant)) / (2*a);
+                x2 = (-b - sqrt(discriminant)) / (2*a);
+                cout << "Roots are real and different." << endl;
+                cout << "x1 = " << x1 << endl;
+                cout << "x2 = " << x2 << endl;
+            }
+            
+            else if (discriminant == 0) {
+                cout << "Roots are real and same." << endl;
+                x1 = -b/(2*a);
+                cout << "x1 = x2 =" << x1 << endl;
+            }
+        
+            else {
+                realPart = -b/(2*a);
+                imaginaryPart =sqrt(-discriminant)/(2*a);
+                cout << "Roots are complex and different."  << endl;
+                cout << "x1 = " << realPart << "+" << imaginaryPart << "i" << endl;
+                cout << "x2 = " << realPart << "-" << imaginaryPart << "i" << endl;
+            }
+        
+            return 0;
+        }
+
+        OutPut :
+        Enter coefficients a, b and c: 4
+        5
+        1
+        Roots are real and different.
+        x1 = -0.25
+        x2 = -1
+      </pre>
+
+      <br>
+      <var>
+          abc = 10;
+      </var>
+
+      <br>
+      <br>
+
+  </body>
 </html>
